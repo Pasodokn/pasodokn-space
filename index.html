@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+          "width=device-width, initial-scale=1.0">
+</head>
+<body class="dark">
+
+<aside class="left" style="position: fixed;">
+    <div id="sidebar">
+        <nav>
+            <ul>
+                <button id="toggle-display-mode" class="clean"><img id="logo" style="width:64px;height:64x;" src='images/dark.jpg'></button>
+            </ul>
+            <ul>
+                <a href="index.html">start</a>
+            </ul>
+            <ul>
+                <a href="dev.html">dev</a>
+            </ul>
+            <ul>
+                <a href="http://mc.pasodokn.space/" target="_blank">mc</a>
+            </ul>
+            <ul>
+                --
+            </ul>
+            <ul>
+                Github
+            </ul>
+            <ul>
+                Contact
+            </ul>
+            <ul>
+                Other
+            </ul>
+        </nav>
+    </div>
+</aside>
+
+<aside class="right">
+    <div id="content" style="text-align: left;">
+        <h1>start</h1>
+        <h2>initialized</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim. Sed vulputate mi sit amet. Gravida cum sociis natoque penatibus et magnis dis parturient. Massa eget egestas purus viverra accumsan. Neque volutpat ac tincidunt vitae semper quis lectus nulla. Amet venenatis urna cursus eget. Id semper risus in hendrerit gravida rutrum quisque. Id eu nisl nunc mi ipsum faucibus vitae aliquet nec. Eu volutpat odio facilisis mauris sit. Suspendisse in est ante in nibh mauris. Quisque non tellus orci ac auctor. In nibh mauris cursus mattis molestie a iaculis at erat. In ante metus dictum at tempor commodo ullamcorper a lacus. Gravida neque convallis a cras semper auctor neque vitae tempus. Elementum integer enim neque volutpat ac. Lacus viverra vitae congue eu consequat ac felis. Mi bibendum neque egestas congue quisque egestas diam in arcu.
+        </p>
+
+        <code>
+            function darkMode(body) {
+                var body = document.body;
+                //Dark mode
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                document.getElementById("logo").src = "images/dark.jpg";
+                updateCodeDisplayMode(true);
+                localStorage.setItem("displayMode", "dark");
+            }
+            
+            function lightMode(body) {
+                var body = document.body;
+                //Light mode
+                body.classList.add("light-mode");
+                body.classList.remove("dark-mode");
+                document.getElementById("logo").src = "images/light.jpg";
+                updateCodeDisplayMode(false);
+                localStorage.setItem("displayMode", "light");
+            }
+            
+            function updateCodeDisplayMode(dark) {
+                var codeBlocks = document.getElementsByName("code");
+                for (let i = 0; i < codeBlocks.length; i++) {
+                    const element = array[i];
+                    element.classList.add(dark ? "dark" : "light")
+                    element.classList.remove(dark ? "light" : "dark")
+                }
+            }
+        </code>
+    </div>
+</aside>
+
+<p>
+
+</p>
+
+</body>
+
+<script src="js/pasodokn.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</html>
